@@ -12,22 +12,23 @@
         }
         #slider figure{
             position: relative;
-            /* a width e a quantidade de imagens multiplicado por 100 */
+            /* the width is the quantity of images multiplied for 100 */
             width: 400%;
             margin: 0;
             left: 0;
             animation: 20s slider infinite;
         }
         #slider figure img {
-            /* a width e a quantidade imagens dividido por 100 */
+            /*the width is the quantity of images divided for 100 */
             width: 25%;
             float: left;
         }
         @keyframes slider {
-            /* vc vai controlar as imagens atraves do left
+            /* 
+            will be control the images Through the left
             ex:
-            left: 0; primeira imagem 
-            a ultima imagem vai aparecer no:
+            left: 0; first image
+            the last image will be appear in the:
             left: (#slider figure width -100%)
             */
              0%{
@@ -51,10 +52,10 @@
 <body>
     <div id="slider"> 
         <figure>
-            <img src="./cat1.jpg" alt="">
-            <img src="./cat2.jpg" alt="">
-            <img src="./cat3.jpg" alt="">
-            <img src="./cat4.jpg" alt="">
+            <img src="./imgs/cat1.jpg" alt="">
+            <img src="./imgs/cat2.jpg" alt="">
+            <img src="./imgs/cat3.jpg" alt="">
+            <img src="./imgs/cat4.jpg" alt="">
         </figure>
     </div>
 </body>
