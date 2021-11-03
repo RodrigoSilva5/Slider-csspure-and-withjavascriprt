@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black ;
+}
+.slider{
+    position: relative;
+    background-color: black;
+    width: 800px;
+    min-height: 500px;
+    margin: 20px;
+    overflow: hidden;
+}
+.slider .slides {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0% at 0 50%);
+    transition: 2s;
+}
+.slider .slides.active{
+    clip-path: circle(150% at 0 50%);
+
+}
+.slider .slides img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.info{
+    position: absolute;
+
+}
+.navigation{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.slider:hover .navigation{
+    opacity: 1;
+}
+.prev-btn, .next-btn{
+    z-index: 999;
+    font-size: 2em;
+    cursor: pointer;
+    background-color: rgba(245, 222, 179, 0.446);
+}
+.navigation-visibility{
+    z-index: 666;
+    display: flex;
+    justify-content: center;
+}
+.navigation-visibility .slide-icon{
+    z-index: 666;
+    background-color: thistle;
+    width: 20px;
+    height: 10px;
+    transform: translateY(-50px);
+    margin: 0 6px;
+    
+}
+.navigation-visibility .slide-icon.active{
+    background-color: teal;
+}
